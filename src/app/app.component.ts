@@ -18,4 +18,11 @@ export class AppComponent {
   add(newTask: string){
     this.tasks.push(newTask);
   }
+
+  remove(existingTask: string){
+    var index = this.tasks.indexOf(existingTask);
+    if (index !== -1) {
+      this.tasks.splice(index, 1);
+    }
+  }
 }
